@@ -1,0 +1,6 @@
+{
+	"MAXPLAYERS": 8,
+	"ADMINIP": "127.0.0.1",
+	"PORT": 420,
+	"STORYFOLDER": "basic"
+}

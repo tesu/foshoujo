@@ -1,0 +1,522 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"admin",
+				"admincommands"
+			],
+			[
+				"border-top",
+				"border-top-left-radius"
+			],
+			[
+				"repe",
+				"repeat-x"
+			],
+			[
+				"laste",
+				"lastMessageTime"
+			],
+			[
+				"lastMes",
+				"lastMessageTime"
+			],
+			[
+				"php",
+				"php"
+			],
+			[
+				"r",
+				"repeat-x"
+			],
+			[
+				"text-",
+				"text-decoration"
+			],
+			[
+				"width",
+				"min-width"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"big",
+				"superBig"
+			],
+			[
+				"te",
+				"text-top"
+			],
+			[
+				"height",
+				"min-height"
+			],
+			[
+				"size",
+				"font-size"
+			],
+			[
+				"token",
+				"tokenizedInputs"
+			],
+			[
+				"padd",
+				"padding-bottom"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "server.js",
+			"settings":
+			{
+				"buffer_size": 275,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "includes/router.js",
+			"settings":
+			{
+				"buffer_size": 1839,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "includes/socket.js",
+			"settings":
+			{
+				"buffer_size": 3282,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/script.js",
+			"settings":
+			{
+				"buffer_size": 2417,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/styles.css",
+			"settings":
+			{
+				"buffer_size": 3738,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Jason/Documents/DEV/foshoujo/index.html",
+		"/C/Users/Jason/Documents/DEV/foshoujo/styles.css",
+		"/C/Users/Jason/Documents/DEV/foshoujo/script.js",
+		"/C/Users/Jason/Documents/DEV/foshoujo/server.js",
+		"/C/Users/Jason/Documents/DEV/foshoujo/includes/socket.js",
+		"/C/Users/Jason/Documents/DEV/foshoujo/includes/router.js",
+		"/C/Users/Jason/Documents/DEV/foshoujo/settings.js",
+		"/C/Users/Jason/Documents/DEV/foshoujo/exports/router.js",
+		"/C/Users/Jason/Pictures/font/new/edgemaster.css",
+		"/C/Users/Jason/My Programs/VNs/Monster Girl Quest/ƒf[ƒ^ˆø‚«Œp‚¬E“‡ŠÖ˜Ai‰‹N“®‘O‚É‚²——‰º‚³‚¢Ij.txt",
+		"/C/Users/Jason/My Programs/VNs/Monster Girl Quest/ReadMe.txt",
+		"/C/Users/Jason/Pictures/font/new/woff/stylesheet.css",
+		"/C/Users/Jason/AppData/Local/Temp/Temp1_webfontkit-20131231-171457.zip/generator_config.txt",
+		"/C/Users/Jason/Documents/DEV/shitChat/index.html",
+		"/C/eula.1028.txt",
+		"/C/Users/Jason/Documents/DEV/shitChat/server.js",
+		"/C/Users/Jason/Documents/GitHub/foshoujo/serverjs/app.js",
+		"/C/Users/Jason/Documents/DEV/shitChat/test.js",
+		"/C/Users/Jason/Downloads/torrent_downloads/[Nipponsei] GIRLS und Panzer Original Soundtrack/Nipponsei - GIRLS und PANZER Original Soundtrack.txt",
+		"/C/Users/Jason/Documents/personal/index.html",
+		"/C/Users/Jason/Documents/personal/includes/sidebardata.php",
+		"/C/Users/Jason/Documents/personal/includes/footer.php",
+		"/C/Users/Jason/Documents/personal/feeds",
+		"/C/Users/Jason/Documents/yes/crypt25.txt",
+		"/C/Users/Jason/Documents/book.html",
+		"/C/Users/Jason/Documents/book/main.html",
+		"/C/Users/Jason/AppData/Local/TeamSpeak 3 Client/styles/default/serverinfo.tpl",
+		"/C/Users/Jason/AppData/Local/TeamSpeak 3 Client/styles/default/clientinfo.tpl",
+		"/C/Users/Jason/AppData/Local/TeamSpeak 3 Client/styles/default/channelinfo.tpl",
+		"/C/Users/Jason/AppData/Local/TeamSpeak 3 Client/styles/classic.qss",
+		"/C/Users/Jason/AppData/Local/TeamSpeak 3 Client/styles/default.qss",
+		"/C/Users/Jason/AppData/Local/TeamSpeak 3 Client/styles/default/serverinfo_de.tpl",
+		"/C/Users/Jason/AppData/Local/TeamSpeak 3 Client/styles/default/clientinfo_de.tpl",
+		"/C/Users/Jason/AppData/Local/TeamSpeak 3 Client/styles/default/channelinfo_de.tpl",
+		"/C/Users/Jason/AppData/Local/TeamSpeak 3 Client/styles/default_vista.qss",
+		"/C/Users/Jason/AppData/Local/TeamSpeak 3 Client/styles/classic_vista.qss",
+		"/C/Users/Jason/Documents/DEV/scrabble.cpp",
+		"/C/Users/Jason/Documents/Visual Studio 2012/Projects/combolock.cpp",
+		"/C/Users/Jason/Documents/DEV/records.cpp",
+		"/C/Users/Jason/Documents/DEV/baseball.cpp",
+		"/C/Users/Jason/Documents/DEV/records.in",
+		"/C/Users/Jason/Documents/DEV/records.out",
+		"/D/SteamLibrary/SteamApps/common/dota 2 beta/dota/cfg/autoexec.cfg",
+		"/C/Users/Jason/My Programs/Starbound/assets/configuration.config",
+		"/C/Users/Jason/My Programs/Starbound/assets/items/armors/backitems/lanternstick/lanternstick.back",
+		"/C/Users/Jason/My Programs/Starbound/assets/tech/jetpack/jetpack.recipe",
+		"/C/Users/Jason/My Programs/Starbound/assets/tech/jetpack/jetpack.tech",
+		"/C/Users/Jason/My Programs/Starbound/assets/tech/jetpack/jetpack.lua",
+		"/C/Users/Jason/My Programs/Starbound/assets/interface/itemdescriptions/tech.itemdescription",
+		"/C/Users/Jason/My Programs/Starbound/assets/tech/morphball/morphball.techitem",
+		"/C/Users/Jason/My Programs/Starbound/assets/tech/jetpack/jetpack.techitem",
+		"/C/Users/Jason/My Programs/Starbound/assets/items/generic/other/doping.consumable",
+		"/C/Users/Jason/My Programs/Starbound/assets/tech/jetpack/hover.techitem",
+		"/C/Users/Jason/My Programs/Starbound/assets/items/generic/celestial/sectorunlock.celestial",
+		"/C/Users/Jason/My Programs/Starbound/assets/items/generic/celestial/tier3engine.celestial",
+		"/C/Users/Jason/My Programs/Starbound/assets/items/generic/celestial/tier2engine.celestial",
+		"/C/Users/Jason/My Programs/Starbound/assets/items/generic/celestial/techupgrade32.celestial",
+		"/C/Users/Jason/My Programs/Starbound/assets/items/armors/floran/floran-tier10/florantier10.legs",
+		"/C/Users/Jason/My Programs/Starbound/assets/items/armors/floran/floran-tier10/florantier10.chest",
+		"/C/Users/Jason/Documents/sb.txt",
+		"/C/Users/Jason/My Programs/Starbound/player/ae2e55a823f1853cb7d67b50b1d02488.player",
+		"/C/Users/Jason/My Programs/Starbound/player/3a342d9b54c50b8e2d5289aac546d8a1.player",
+		"/C/Users/Jason/My Programs/Starbound/assets/default_configuration.config",
+		"/C/Users/Jason/Documents/abc/staple_stable.abc",
+		"/C/Users/Jason/My Programs/Starbound/player/81a19a653137af1c7f286971bc58aed4.player",
+		"/C/Users/Jason/My Programs/Starbound/player/00bf72e87a717d6b5658200176439b26.player",
+		"/C/Users/Jason/My Programs/Starbound/player/75d375bc36fe0076c5ff65a78fce82ea.player",
+		"/C/Users/Jason/My Programs/Starbound/player/1aa5e407f98e90ffdee84ad19a45f082.player",
+		"/C/Users/Jason/Downloads/torrent_downloads/readme.nfo",
+		"/C/Users/Jason/Documents/abc/sirius.abc",
+		"/C/Users/Jason/Documents/abc/my_soul_your_beats.abc",
+		"/C/Users/Jason/Documents/abc/watashi_ga_motenai_no_dou_kangaete_mo_omaera_ga_warui.abc",
+		"/C/Users/Jason/Documents/abc/sorairo_days.abc",
+		"/C/Users/Jason/Documents/abc/sisters_noise.abc",
+		"/C/Users/Jason/Documents/abc/level_5_judgelight.abc",
+		"/C/Users/Jason/Documents/abc/gomen_ne_ii_ko_ja_irarenai.abc",
+		"/C/Users/Jason/Documents/abc/daisy.abc",
+		"/C/Users/Jason/Documents/abc/cruel_angels_thesis.abc",
+		"/C/Users/Jason/Documents/abc/brave_song.abc",
+		"/C/Users/Jason/Documents/abc/connect.abc",
+		"/C/Users/Jason/Documents/abc/kimi_no_shiranai_monogatari.abc",
+		"/C/Users/Jason/Documents/abc/irony.abc",
+		"/C/Users/Jason/Documents/abc/only_my_railgun.abc",
+		"/C/Users/Jason/Documents/abc/sugar_sweet_nightmare.abc",
+		"/C/Users/Jason/Downloads/pt.htm",
+		"/D/SteamLibrary/SteamApps/common/dota 2 beta/dota/resource/dota_english.txt",
+		"/D/SteamLibrary/SteamApps/common/dota 2 beta/dota/cfg/config.cfg",
+		"/C/Users/Jason/Documents/DEV/helloworld.cpp",
+		"/C/Users/Jason/Downloads/sample.cpp",
+		"/C/Users/Jason/Documents/DEV/acsl.in",
+		"/C/Users/Jason/Documents/Visual Studio 2012/Projects/addthenumbers.cpp",
+		"/C/Users/Jason/Documents/2vn4u/connect.html",
+		"/C/Users/Jason/Documents/2vn4u/main.css",
+		"/C/Users/Jason/Documents/2vn4u/faq.html",
+		"/C/Users/Jason/Documents/2vn4u/index.html",
+		"/C/Users/Jason/Documents/GitHub/foshoujo/serverjs/index.html",
+		"/C/Users/Jason/Desktop/moosic.fpl",
+		"/C/Users/Jason/Documents/2vn4u/template.html",
+		"/C/Users/Jason/Documents/node.js/server.js",
+		"/C/Users/Jason/Documents/node.js/main.js",
+		"/C/Users/Jason/Documents/node.js/router.js",
+		"/C/Users/Jason/Documents/node.js/requestHandlers.js",
+		"/C/Users/Jason/Documents/node.js/html/form.html",
+		"/C/Users/Jason/Documents/node.js/index.js",
+		"/C/Users/Jason/Documents/node.js/helloworld.js",
+		"/C/Users/Jason/Downloads/vegas/ChingLiu.Install.Notes.nfo"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"clientstatuses",
+			");\n",
+			"CLIENTNAMES",
+			"CLIENTIDS",
+			"global.",
+			"()});",
+			"display:",
+			"<br />",
+			"now",
+			"time",
+			"username",
+			"ip",
+			"font",
+			"font-",
+			"font",
+			"font-",
+			"inputcounts",
+			"40",
+			"password",
+			"cin",
+			"multiplier",
+			"multiplier\n",
+			"\");\n",
+			"Outworld Devourer",
+			"Necrophos",
+			"Windranger",
+			"rn",
+			"xe",
+			"rn",
+			"ti"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"clientstatuses",
+			"clientnames",
+			"clientids",
+			"",
+			"\\n",
+			"time",
+			"now",
+			"socket.username",
+			"username",
+			"inputcount",
+			"ifile",
+			"letterMultiplier",
+			"Outworld Destroyer",
+			"Necrolyte",
+			"Waifurunner"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "server.js",
+					"settings":
+					{
+						"buffer_size": 275,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								171,
+								171
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "includes/router.js",
+					"settings":
+					{
+						"buffer_size": 1839,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1670,
+								1670
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "includes/socket.js",
+					"settings":
+					{
+						"buffer_size": 3282,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								594,
+								594
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "client/script.js",
+					"settings":
+					{
+						"buffer_size": 2417,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								571,
+								571
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 84.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "client/styles.css",
+					"settings":
+					{
+						"buffer_size": 3738,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

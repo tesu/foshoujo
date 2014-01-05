@@ -1,0 +1,2 @@
+node story.js
+pause 

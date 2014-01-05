@@ -1,0 +1,256 @@
+@font-face {
+  font-family: 'edgemaster';
+  font-style: normal;
+  font-weight: 400;
+  src: local('edgemaster'), url(edgemaster.woff) format('woff');
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	font-family: "Josefin Sans", sans-serif;
+	background: url(gradient.png);
+	background-repeat: repeat-x;
+	background-color: #ffb4b4;
+	overflow: hidden;
+	line-height: normal;
+	visibility: hidden;
+}
+
+div#header {
+	margin-left: 0.25em;
+	font-size: 2em;
+	font-weight: bold;
+	padding: 0;
+	line-height: 1.25em;
+}
+
+div#body {
+	height: 600px;
+	width: 100%;
+}
+
+table#table {
+	height: 600px;
+	width: 100%;
+	border: 0;
+	border-spacing: 0;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+td {
+	padding: 0;
+	vertical-align: top;
+	height: 100%;
+}
+
+h2 {
+	margin: 0;
+	margin-left: .75em;
+	font-size: 1.5em;
+}
+
+td#menu {
+	width: 200px;
+	max-width: 200px;
+}
+
+td#menu ul {
+	padding: 0;
+	list-style: none;
+	margin-left: 1em;
+	margin-right: 1em;
+	font-weight: bold;
+	width: calc(100% - 2em);
+	overflow: hidden;
+}
+
+td#menu ul li ul {
+	display: none;
+}
+
+td#menu ul li:last-child ul {
+	display: block;
+}
+
+td#menu ul li:hover ul {
+	display: block;
+}
+
+td#menu ul:hover li:last-child ul {
+	display: none;
+}
+
+td#menu ul li:last-child:hover ul {
+	display: block;
+}
+
+td#menu ul li {
+	padding-bottom: .5em;
+}
+
+td#menu input#admincommands {
+	width: 200px;
+	position: absolute;
+	left: 0;
+	bottom: calc(100% - 450px + 1em);
+	display: none;
+}
+
+iframe#bgmusic {
+	position: absolute;
+    bottom: calc(100% - 600px);
+	left: 0;
+	display: none;
+}
+
+td#content {
+	width: 800px;
+	background: url(sample.png);
+}
+
+div#pregame {
+	display: none;
+}
+
+input#nameinput {
+	width: 300px;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+td#content > div {
+	position: absolute;
+    bottom: calc(100% - 600px);
+    left: 200px;
+	width: calc(800px - .5em);
+	height: calc(200px - .5em);
+	border-radius: 5px;
+	padding: .25em;
+	background-color: rgba(0, 0, 0, 0.3);
+	font-family: edgemaster, sans-serif;
+	font-size: 2em;
+}
+
+td#content div span {
+	width: 150px;
+	height: 50px;
+	font-size: 1.5em;
+	border-radius: 5px;
+	background-color: rgba(0, 0, 0, 0.3);
+	text-align: center;
+	vertical-align: center;
+	display: none;
+}
+
+td#content div span:hover {
+	cursor: pointer;
+}
+
+td#content div span#button1 {
+	position: absolute;
+    bottom: 69px;
+    left: 9px;
+}
+
+td#content div span#button2 {
+	position: absolute;
+    bottom: 69px;
+    left: 167px;
+}
+
+td#content div span#button3 {
+	position: absolute;
+    bottom: 69px;
+    left: 326px;
+}
+
+td#content div span#button4 {
+	position: absolute;
+    bottom: 69px;
+    left: 484px;
+}
+
+td#content div span#button5 {
+	position: absolute;
+    bottom: 69px;
+    left: 643px;
+}
+td#content div span#button6 {
+	position: absolute;
+    bottom: 14px;
+    left: 9px;
+}
+
+td#content div span#button7 {
+	position: absolute;
+    bottom: 14px;
+    left: 167px;
+}
+
+td#content div span#button8 {
+	position: absolute;
+    bottom: 14px;
+    left: 326px;
+}
+
+td#content div span#button9 {
+	position: absolute;
+    bottom: 14px;
+    left: 484px;
+}
+
+td#content div span#button10 {
+	position: absolute;
+    bottom: 14px;
+    left: 643px;
+}
+
+td#content div span#nextbutton {
+	position: absolute;
+    bottom: 14px;
+    left: 643px;
+}
+
+td#content div div:first-child{
+	margin-top: -1em;
+	margin-left: -.25em;
+	height: 1em;
+	text-align: center;
+	width: 150px;
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 4px;
+	display: none;
+}
+
+td#chat {
+	width: calc(100% - 4px);
+	max-width: calc(100% - 4px);
+}
+
+div#chatbox {
+	width: calc(100% - 4px);
+	max-width: calc(100% - 4px);
+	height: calc(600px - 4em);
+	max-height: calc(600px - 4em);
+	margin: 1px;
+	border: 1px solid gray;
+	background-color: rgba(0, 0, 0, 0.3);
+	overflow: auto;
+	word-wrap: break-word;
+	word-break: ;
+}
+
+input#chatinput {
+	margin: 1px;
+	width: calc(100% - 2px);
+}
+
+div#footer {
+	margin-left: 2em;
+}

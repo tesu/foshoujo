@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>Fuckoff Shoujo</title>
+		<link href="http://fonts.googleapis.com/css?family=Josefin+Sans:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+		<link href="styles.css" rel="stylesheet" type="text/css" />
+		<link href="favicon.ico" rel="shortcut icon" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<div id="body">
+			<table id="table"> <!-- haha fuck you i do what i want -->
+				<tr>
+					<td id="menu">
+						<ul>
+							<li>
+								<h2>Menu</h2>
+								<ul>
+									<li>History</li>
+									<li>Hide Text</li>
+									<li>Disconnect</li>
+								</ul>
+							</li>
+							<li>
+								<h2>Items</h2>
+								<ul></ul>
+							</li>
+							<li>
+								<h2>Players Online</h2>
+								<ul id="usersonline"></ul>
+							</li>
+						</ul>
+						<input type="text" id="admincommands" width="200px" placeholder="ADMIN BOX" />
+						<iframe width="200" height="150" src="" frameborder="0" id="bgmusic"></iframe>
+					</td>
+					<td id="content">
+						<div>
+							<div id="speaker"></div>
+							<div id="dialog"></div>
+							<div id="pregame">Enter your name: <br /><input type="text" id="nameinput" width="300px" /></div>
+							<span id="button1"></span>
+							<span id="button2"></span>
+							<span id="button3"></span>
+							<span id="button4"></span>
+							<span id="button5"></span>
+							<span id="button6"></span>
+							<span id="button7"></span>
+							<span id="button8"></span>
+							<span id="button9"></span>
+							<span id="button10"></span>
+							<span id="nextbutton">next &gt;</span>
+						</div>
+					</td>
+					<td id="chat">
+						<h2>Chat</h2>
+						<div id="chatbox"></div>
+						<input type="text" id="chatinput" />
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="footer">
+			Server Status: <span id="serverstatus">Unconnected</span>
+		</div>
+	</body>
+</html>
