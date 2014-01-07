@@ -42,12 +42,21 @@ module.exports = function(io) {
 	})
 }
 
+function Player() {
+	this.ip = "";
+	this.items = [];
+	this.hp = 100;
+	this.status = 1;
+	this.itemCheck = function(data) {
+		if (this.items.indexOf(data) != -1) return true;
+		return false
+	}
+}
+
 function playerJoin(io, socket) {
 	socket.emit('ready', {});
-	socket.d = new Object();
+	socket.d = new Player();
 	socket.d.ip = socket.handshake.address.address;
-	socket.d.items = [];
-	socket.d.hp = 100;
 
 	if (clients.name.indexOf(socket.d.ip) == -1) {
 		socket.d.name = socket.d.ip;
@@ -89,8 +98,8 @@ function playerJoin(io, socket) {
 		}
 
 		clients.name[clients.name.indexOf(socket.d['name'])] = newname;
-		socket.d['name'] = newname;
-		socket.d['namechanged'] = true;
+		socket.d.name = newname;
+		socket.d.namechanged = true;
 		io.sockets.emit('usersonline', {'array': clients.name});
 		socket.emit('namechangesuccess', {});
 		return;

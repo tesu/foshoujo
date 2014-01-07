@@ -1,4 +1,5 @@
-var s = require("../../includes/scriptbuilder.js");
+var scriptbuilder = require("../../includes/scriptbuilder.js");
+s = new scriptbuilder()
 
 s.music("sHk-VDpKWR4");
 s.speaker("bob");
@@ -13,7 +14,7 @@ s.speaker("");
 s.text("now nobody is talking");
 s.text("yay");
 s.text("???");
-s.speaker("fred");
+s.speaker("PLAYERNAME");
 s.text("hello");
 s.text("ok");
 s.music("");
@@ -21,7 +22,7 @@ s.text("the music just stopped?");
 s.text("ok");
 s.speaker("bob");
 s.text("im back");
-s.function(function(){
+s.function(function(io, socket){
 	console.log("OK THANK");
 })
 s.text("THE END");

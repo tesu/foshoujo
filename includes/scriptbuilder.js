@@ -1,4 +1,4 @@
-function scriptBuilder() {
+module.exports = function() {
 	var progress = 0;
 	var script = [];
 	this.settings = {};
@@ -45,6 +45,21 @@ function scriptBuilder() {
 		script.push({'type': 'pause', 'data': data});
 	}
 
+	this.HP = function(data, wait) {
+		wait = typeof wait !== "undefined" ? wait : false;
+		script.push({'type': 'hp', 'data': data, 'wait': wait});
+	}
+
+	this.itemAdd = function(data, wait) {
+		wait = typeof wait !== "undefined" ? wait : false;
+		script.push({'type': 'itemAdd', 'data': data, 'wait': wait});
+	}
+
+	this.itemRemove = function(data, wait) {
+		wait = typeof wait !== "undefined" ? wait : false;
+		script.push({'type': 'itemRemove', 'data': data, 'wait': wait});
+	}
+
 	this.function = function(data, wait) {
 		wait = typeof wait !== "undefined" ? wait : false;
 		script.push({'type': 'function', 'data': data, 'wait': wait});
@@ -54,14 +69,13 @@ function scriptBuilder() {
 		var story = this;
 
 		while (progress < script.length) {
-			console.log(progress);
 			socket.emit('nextOff', {});
 			switch(script[progress].type) {
 				case "text":
-					socket.emit('changeDialog', {'message': script[progress].data});
+					socket.emit('changeDialog', {'message': processText(script[progress].data)});
 					break;
 				case "speaker":
-					socket.emit('changeSpeaker', {'message': script[progress].data});
+					socket.emit('changeSpeaker', {'message': processText(script[progress].data)});
 					break;
 				case "music":
 					socket.emit('changeMusic', {'message': script[progress].data});
@@ -74,6 +88,24 @@ function scriptBuilder() {
 					break;
 				case "buttonOn":
 					socket.emit('buttonOn', {'message': script[progress].data});
+					break;
+				case "nextOn": // this should probably never be used
+					socket.emit('nextOn', {});
+					break;
+				case "nextOff": // nor should this one
+					socket.emit('nextOff', {});
+					break;
+				case "itemAdd":
+					socket.d.items.push(script[progress].data);
+					break;
+				case "itemRemove":
+					socket.d.items.splice(socket.d.items.indexOf(script[progress].data));
+					break;
+				case "hp":
+					socket.d.hp += script[progress].data;
+					if (socket.d.hp <= 0) {
+						socket.d.status = 0;
+					}
 					break;
 				case "pause":
 					progress++;
@@ -88,6 +120,7 @@ function scriptBuilder() {
 			}
 
 			if (progress == script.length - 1) {
+				// END OF SCRIPT REACHED, GAME OVER
 				socket.emit('nextOff', {});
 				return false;
 			}
@@ -99,10 +132,13 @@ function scriptBuilder() {
 			}
 
 			progress++;
-		}
+		}		
 
 		return false;
 	}
 }
 
-module.exports = new scriptBuilder();
+function processText(string, socket) {
+	if (typeof string != "string") return string;
+	return string.replace(/PLAYERNAME/g, socket.d.name);
+}
