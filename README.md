@@ -1,6 +1,6 @@
 Installation
 ============
 
-1. Install node.js
-2. Install socket.io
-3. Run server.js with node
+1. ```npm install fuckoffshoujo```
+2. ```node server.js```
+3. kill yourself because why are you running this piece of shit software
