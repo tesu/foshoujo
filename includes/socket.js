@@ -199,8 +199,11 @@ function gameStart(io, socket) {
 
 	var story = require("../story/" + SETTINGS.STORYFOLDER + "/story.js");
 	// deal with settings
-	var progress = continueStory(io, socket, story, 0);
-	socket.on('next', function() { progress = continueStory(io, socket, story, progress); });
+	var ready = story.run(io, socket);
+	socket.on('next', function() { 
+		if (!ready) return;
+		ready = story.run(io, socket);
+	});
 	return;
 }
 
@@ -236,29 +239,4 @@ function spectatorJoin(io, socket) {
 		console.log(socket.d.ip + " disconnection");
 	})
 	return;
-}
-
-function continueStory(io, socket, story, progress) {
-	for (var i = progress; i < story.script.length; i++) {
-		socket.emit('nextOff', {});
-		switch(story.script[i].type) {
-			case "text":
-				socket.emit('changeDialog', {'message': story.script[i].data});
-				break;
-			case "speaker":
-				socket.emit('changeSpeaker', {'message': story.script[i].data});
-				break;
-			case "music":
-				socket.emit('changeMusic', {'message': story.script[i].data});
-				break;
-			default:
-				socket.emit('error', {'message': 'Invalid script object'});
-				break;
-		}
-		if (story.script[i].wait == true) {
-			socket.emit('nextOn', {});
-			return i + 1;
-		}
-	}
-	return i + 1;
 }

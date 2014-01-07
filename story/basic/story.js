@@ -21,8 +21,9 @@ s.text("the music just stopped?");
 s.text("ok");
 s.speaker("bob");
 s.text("im back");
+s.function(function(){
+	console.log("OK THANK");
+})
 s.text("THE END");
 
-for (prop in s.output) {
-	exports[prop] = s.output[prop];
-}
+for (p in s) exports[p] = s[p];

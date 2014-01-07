@@ -215,6 +215,7 @@ td#content div span#nextbutton {
 	position: absolute;
     bottom: 14px;
     left: 643px;
+    background-color: transparent;
 }
 
 td#content div div:first-child{
@@ -243,7 +244,6 @@ div#chatbox {
 	background-color: rgba(0, 0, 0, 0.3);
 	overflow: auto;
 	word-wrap: break-word;
-	word-break: ;
 }
 
 input#chatinput {
