@@ -42,10 +42,12 @@ module.exports = function(io) {
 	})
 }
 
-function Player() {
-	this.ip = "";
+function Player(ip) {
+	this.ip = ip;
+	this.name = "";
 	this.items = [];
 	this.hp = 100;
+	this.story = require("../story/" + SETTINGS.STORYFOLDER + "/story.js");
 	this.status = 1;
 	this.itemCheck = function(data) {
 		if (this.items.indexOf(data) != -1) return true;
@@ -55,8 +57,7 @@ function Player() {
 
 function playerJoin(io, socket) {
 	socket.emit('ready', {});
-	socket.d = new Player();
-	socket.d.ip = socket.handshake.address.address;
+	socket.d = new Player(socket.handshake.address.address);
 
 	if (clients.name.indexOf(socket.d.ip) == -1) {
 		socket.d.name = socket.d.ip;
@@ -126,6 +127,10 @@ function playerJoin(io, socket) {
 				server.stage = 1;
 				io.sockets.emit('gamestart', {});
 				break;
+			case "restart":
+				server.stage = 0;
+				io.sockets.emit('ready', {});
+				break;
 			case "kick":
 				var user = io.sockets.socket(clients.id[clients.name.indexOf(data.message.replace(/^kick /, ''))]);
 				if (typeof user == "undefined") {
@@ -187,7 +192,7 @@ function playerJoin(io, socket) {
 	socket.on('gamestart', function() {
 		if (server.stage != 1) return;
 
-		gameStart(io, socket);
+		gameStart(io, socket, socket.d.story);
 		return;
 	})
 
@@ -195,9 +200,13 @@ function playerJoin(io, socket) {
 		clients.id.splice(clients.id.indexOf(socket.id), 1);
 		clients.name.splice(clients.name.indexOf(socket.d.name), 1);
 		clients.status.splice(clients.id.indexOf(socket.id), 1);
+		socket.d.story.restart();
 
 		socket.broadcast.emit('usersonline', {'array': clients.name});
 		console.log(socket.d.ip + " disconnection");
+		if (clients.id.length == 0) {
+			server.stage = 0;
+		}
 		return;
 	})
 }
@@ -206,12 +215,11 @@ function gameStart(io, socket) {
 	socket.on('gamestart', function() {});
 	socket.on('namechange', function() {});
 
-	var story = require("../story/" + SETTINGS.STORYFOLDER + "/story.js");
 	// deal with settings
-	var ready = story.run(io, socket);
+	var ready = socket.d.story.run(io, socket);
 	socket.on('next', function() { 
 		if (!ready) return;
-		ready = story.run(io, socket);
+		ready = socket.d.story.run(io, socket);
 	});
 	return;
 }

@@ -14,7 +14,7 @@ body {
 	width: 100%;
 	height: 100%;
 	font-family: "Josefin Sans", sans-serif;
-	background: url(gradient.png);
+	background: url(images/gradient.png);
 	background-repeat: repeat-x;
 	background-color: #ffb4b4;
 	overflow: hidden;
@@ -112,7 +112,7 @@ iframe#bgmusic {
 
 td#content {
 	width: 800px;
-	background: url(sample.png);
+	background: url(images/sample.png);
 }
 
 div#pregame {

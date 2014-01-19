@@ -3,9 +3,27 @@ module.exports = function() {
 	var script = [];
 	this.settings = {};
 
+	this.reset = function() {
+		progress = -1;
+		script = [];
+	}
+
+	this.restart = function() {
+		progress = 0;
+	}
+
+	this.getScript = function() {
+		return script;
+	}
+
 	this.text = function(data, wait) {
 		wait = typeof wait !== "undefined" ? wait : true;
 		script.push({'type': 'text', 'data': data, 'wait': wait});
+	}
+
+	this.appendText = function(data, wait) {
+		wait = typeof wait !== "undefined" ? wait : true;
+		script.push({'type': 'append', 'data': data, 'wait': wait});
 	}
 
 	this.speaker = function(data, wait) {
@@ -60,22 +78,20 @@ module.exports = function() {
 		script.push({'type': 'itemRemove', 'data': data, 'wait': wait});
 	}
 
-	this.function = function(data, wait) {
-		wait = typeof wait !== "undefined" ? wait : false;
-		script.push({'type': 'function', 'data': data, 'wait': wait});
+	this.function = function(data) {
+		script.push({'type': 'function', 'data': data});
 	}
 
 	this.run = function(io, socket) {
 		var story = this;
 
 		while (progress < script.length) {
-			socket.emit('nextOff', {});
 			switch(script[progress].type) {
 				case "text":
-					socket.emit('changeDialog', {'message': processText(script[progress].data)});
+					socket.emit('changeDialog', {'message': processText(script[progress].data, socket)});
 					break;
 				case "speaker":
-					socket.emit('changeSpeaker', {'message': processText(script[progress].data)});
+					socket.emit('changeSpeaker', {'message': processText(script[progress].data, socket)});
 					break;
 				case "music":
 					socket.emit('changeMusic', {'message': script[progress].data});
@@ -110,10 +126,13 @@ module.exports = function() {
 				case "pause":
 					progress++;
 					setTimeout(story.run, script[progress].data * 1000, [io, socket]);
-					return false;
-				case "function":
-					script[progress].data(io, socket);
 					break;
+				case "function":
+					script[progress].data(io, socket, story);
+
+					progress++;
+					story.run(io, socket);
+					return true;
 				default:
 					console.log("INVALID SCRIPT OBJECT: " + script[progress].type);
 					break;
@@ -121,24 +140,22 @@ module.exports = function() {
 
 			if (progress == script.length - 1) {
 				// END OF SCRIPT REACHED, GAME OVER
-				socket.emit('nextOff', {});
 				return false;
 			}
 
 			if (script[progress].wait == true) {
 				progress++;
-				socket.emit('nextOn', {});
 				return true;
 			}
-
 			progress++;
-		}		
-
+		}
 		return false;
 	}
 }
 
 function processText(string, socket) {
 	if (typeof string != "string") return string;
-	return string.replace(/PLAYERNAME/g, socket.d.name);
+	return string.replace(/PLAYERNAME/g, socket.d.name).replace(/VAR_([^ ]+)/g, function(match, p1) {
+		return socket.d[p1];
+	});
 }

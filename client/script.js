@@ -1,5 +1,8 @@
 var socket = new io.connect();
 
+var ready = true;
+var dialog = '';
+
 socket.on('ready', function(){
 	$("body").css("visibility", "visible");
 	$("#pregame").css("display", "block"); 
@@ -47,7 +50,7 @@ socket.on('chat', function(data){
 });
 
 socket.on('changeBG', function(data){
-	$("#content").css("background-image", "url(" + data.message + ")"); // redo this later
+	$("#content").css("background-image", "url(bg.png?q=" + data.message + ")"); // redo this later
 });
 
 socket.on('changeMusic', function(data){
@@ -70,7 +73,35 @@ socket.on('changeSpeaker', function(data){
 });
 
 socket.on('changeDialog', function(data){
-	$("#dialog").text(data.message);
+	$("#nextbutton").css("display", "none");
+	ready = false;
+	$("#dialog").text("");
+	dialog = data.message;
+	var charcount = 0;
+	var timer;
+
+	(function animateType() {
+		timer = setTimeout(function() {
+			if ($("#dialog").text() == dialog) {
+				clearTimeout(timer);
+				$("#nextbutton").css("display", "block");
+				ready = true;
+				return;
+			}
+
+			charcount++;
+			$("#dialog").text(dialog.substr(0, charcount));
+			animateType();
+
+			if (charcount == dialog.length) {
+				clearTimeout(timer);
+				$("#nextbutton").css("display", "block");
+				ready = true;
+				return;
+			}
+			return;
+		}, 50)
+	}());
 });
 
 socket.on('buttonOn', function(data){
@@ -82,20 +113,25 @@ socket.on('buttonOff', function(data){
 	$("#button" + data.id).css("display", "none");
 })
 
-socket.on('nextOn', function(data){
+/*socket.on('nextOn', function(data){
 	$("#nextbutton").css("display", "block");
 })
 
 socket.on('nextOff', function(data){
 	$("#nextbutton").css("display", "none");
-})
+})*/
 
 $("document").ready(function(){
 	$(document).keypress(function(e){
 		if($(e.target).is('input, textarea, select')) return;
 
 		if(e.charCode == 13 || e.keyCode == 13 || e.which == 13 || e.charCode == 32 || e.keyCode == 32 || e.which == 32) {
-			socket.emit('next', {});
+			if (ready) {
+				socket.emit('next', {});
+			} else {
+				$("#dialog").text(dialog)
+				ready = true;
+			}
 		}
 		return;
 	})
@@ -120,6 +156,7 @@ $("document").ready(function(){
 		if(e.charCode == 13 || e.keyCode == 13 || e.which == 13) {
 			socket.emit('admincommand', {'message': $('#admincommands').val()});
 			$("#admincommands").val('');
+			$('#admincommands').blur();
 			return;
 		}
 	});
